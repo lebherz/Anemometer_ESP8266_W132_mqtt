@@ -20,6 +20,8 @@ A ESP-8266 develompent board, which sents sensordata of a Ventus W132 via mqtt e
                          D7   ----------------- blue
 ```
 
+![wireing](https://github.com/lebherz/ESP8266_W132_mqtt/blob/master/W132-hack.png?raw=true)
+
   Your W132 does not need the batteries in its battery compartment, the W132 will get his power from the ESP-8266
 
 orginal code is from: https://gist.github.com/micw/098709efc83a9d9ebf16d14cea4ca38e  
