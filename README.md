@@ -25,5 +25,5 @@ A ESP-8266 develompent board, which sents sensordata of a Ventus W132 via mqtt e
 orginal code is from: https://gist.github.com/micw/098709efc83a9d9ebf16d14cea4ca38e  
                       https://forum.iobroker.net/topic/23763/windanzeige-mit-ventus-w132-wemos-d1-mini/12  
 
-                      I modified and add nessesary stuff  that it works(!)  
-    Have fun! René Lebherz  
+I modified and add nessesary stuff  that it works(!)  
+Have fun! René Lebherz  
