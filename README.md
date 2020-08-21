@@ -1,7 +1,7 @@
 # ESP8266_W132_mqtt
 
-![Ventus W132](https://github.com/lebherz/ESP8266_W132_mqtt/blob/master/Ventus_W132.png?raw=true)
-  Link to buy a Ventus W132: https://amzn.to/3aKWZxz
+![Ventus W132](https://github.com/lebherz/ESP8266_W132_mqtt/blob/master/Ventus_W132.png?raw=true)  
+Link to buy a Ventus W132: https://amzn.to/3aKWZxz
 
 A ESP-8266 develompent board, which sents sensordata of a Ventus W132 via mqtt e.g. to HomeAssistant 
    sensors:
