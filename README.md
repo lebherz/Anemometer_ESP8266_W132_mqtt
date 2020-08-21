@@ -29,19 +29,53 @@ orginal code is from: https://gist.github.com/micw/098709efc83a9d9ebf16d14cea4ca
 
 ## Home Assistant integration
 
+### configuration.yaml
+```
+sensor:
+  - platform: "mqtt"
+    name: wind direction
+    state_topic: "wind/<add-your-ESPID>/wind_direction"
+    icon: mdi:compass-rose
+    unit_of_measurement: '°'
+  - platform: "mqtt"
+    name: wind speed
+    state_topic: "wind/<add-your-ESPID>/wind_speed"
+    unit_of_measurement: 'km/h'
+    value_template: '{{ (value_json|float*3.6)|round(0) }}' //value_json in meter/seconds!
+    icon: mdi:speedometer
+  - platform: "mqtt"
+    name: wind gust
+    state_topic: "wind/<add-your-ESPID>/wind_gust"
+    unit_of_measurement: 'km/h'
+    value_template: '{{ (value_json|float*3.6)|round(0) }}' //value_json in meter/seconds!
+    icon: mdi:weather-windy
+  - platform: "mqtt"
+    name: wind temperature
+    state_topic: "wind/<add-your-ESPID>/temp"
+    icon: mdi:temperature-celsius
+    unit_of_measurement: '°C'
+  - platform: "mqtt"
+    name: wind humity
+    state_topic: "wind/<add-your-ESPID>/humi"
+    icon: mdi:water-percent
+    unit_of_measurement: '%'
+
+
+```
+
 ### Lovelace compass-card
 ![wireing](https://github.com/lebherz/ESP8266_W132_mqtt/blob/master/compass-card.png?raw=true)
 
 ```
+type: 'custom:compass-card'
+entity: sensor.wind_direction
+name: wind direction
+direction_offset: 0
+secondary_entity: sensor.wind_speed
 compass:
   indicator: arrow_outward
   language: de
   show_north: false
-direction_offset: 0
-entity: sensor.windrichtung
-name: Windrichtung
-secondary_entity: sensor.windgeschwindigkeitrichtung
-type: 'custom:compass-card'
 ```
 
 
