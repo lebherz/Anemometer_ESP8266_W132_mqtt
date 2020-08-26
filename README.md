@@ -70,15 +70,36 @@ sensor:
 ![wireing](https://github.com/lebherz/ESP8266_W132_mqtt/blob/master/compass-card.png?raw=true)
 
 ```
-type: 'custom:compass-card'
-entity: sensor.wind_direction
-name: wind direction
-direction_offset: 0
-secondary_entity: sensor.wind_speed
-compass:
-  indicator: arrow_outward
-  language: de
-  show_north: false
+type: vertical-stack
+cards:
+  - compass:
+      indicator: arrow_inward
+      language: de
+      show_north: true
+    direction_offset: 0
+    entity: sensor.winddirection
+    name: Compass Card
+    secondary_entity: sensor.windspeed
+    type: 'custom:compass-card'
+  - cards:
+      - type: 'custom:mini-graph-card'
+        entities:
+          - entity: sensor.winddirection
+        name: Windspeed
+        font_size: 100
+        line_color: var(--accent-color)
+        line_width: 5
+        points_per_hour: 6
+      - type: 'custom:mini-graph-card'
+        name: Windgust
+        entities:
+          - entity: sensor.windgust
+        font_size: 100
+        line_color: var(--accent-color)
+        line_width: 5
+        points_per_hour: 6
+    type: horizontal-stack
+
 ```
 
 
