@@ -1,4 +1,4 @@
-# ESP8266_W132_mqtt
+# Anemometer with ESP8266 Ventus W132 and mqtt
 
 ![Ventus W132](https://github.com/lebherz/ESP8266_W132_mqtt/blob/master/Ventus_W132.png?raw=true)  
 Link to buy a Ventus W132: https://amzn.to/3aKWZxz
